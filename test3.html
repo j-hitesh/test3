@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Notes</title>
+    <style>
+         body{
+          margin: 0;
+          padding: 0;
+         }
+        .container {
+            display: flex;
+            /* text-align: center; */
+            justify-content: space-between;
+            gap: 4px;
+            margin-top: 5%;
+            margin-left: 20%;
+            margin-right:25% ;
+      
+        }
+        
+        .left-box, .right-box {
+            width: 48%;
+            padding: 20px;
+            border: 5px solid #ccc;
+            
+        }
+        .left-box ul {
+          list-style: none;
+        }
+        .left-box ul li{
+          background-color: #ccc;
+          margin-top: 5px;
+        }
+        #cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-box">
+            <h2>Products</h2>
+            <ul>
+                <li>
+                    Product-1
+                    <button onclick="addToCart(1)">+</button>
+                    <span id="Product-1"></span>
+                    <button onclick="removeFromCart(1)">-</button>
+                </li>
+                <li>
+                  Product-2
+                    <button onclick="addToCart(2)">+</button>
+                    <span id="Product-2"></span>
+                    <button onclick="removeFromCart(2)">-</button>
+                </li>
+                <li>
+                  Product-3
+                    <button onclick="addToCart(3)">+</button>
+                    <span id="Product-3"></span>
+                    <button onclick="removeFromCart(3)">-</button>
+                </li>
+            </ul>
+        </div>
+        <div class="right-box">
+            <h2>Cart</h2>
+            <div id="cart-items">
+            </div>
+            <p id="cart-total">Total Price: $0</p>
+        </div>
+    </div>
+
+   <script src="test3.js"></script>
+</body>
+</html>
